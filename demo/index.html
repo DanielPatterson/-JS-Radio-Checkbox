@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="">
+    
+    <title></title>
+    
+    <link href="dist/css/bootstrap.css" rel="stylesheet">
+    <link href="dist/css/font-awesome.min.css" rel="stylesheet">
+    <link href="dist/css/bootstrap-radio-check.css" rel="stylesheet">
+	<style>
+	body {
+	padding: 10px;	
+	}
+	label {
+	font-weight: 100;	
+	}
+	</style>
+</head>
+
+<body>
+<div class="container">
+	<div class="row">
+    	<div class="col-lg-3">
+        	
+            <h3>Checkbox</h3>            
+            <label class="checkbox" for="checkbox1">
+            <input type="checkbox" value="" id="checkbox1" data-toggle="checkbox">
+            Unchecked
+            </label>
+            <label class="checkbox" for="checkbox2">
+            <input type="checkbox" checked="checked" value="" id="checkbox2" data-toggle="checkbox">
+            Checked
+            </label>
+            <label class="checkbox" for="checkbox3">
+            <input type="checkbox" value="" id="checkbox3" data-toggle="checkbox" disabled="">
+            Disabled unchecked
+            </label>
+            <label class="checkbox" for="checkbox4">
+            <input type="checkbox" checked="checked" value="" id="checkbox4" data-toggle="checkbox" disabled="" >
+            Disabled checked
+            </label>
+			
+            <hr />
+            
+            <h3>Radio</h3>
+            <label class="radio">
+            <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" data-toggle="radio">
+            Radio is off
+            </label>
+            <label class="radio">
+            <input type="radio" name="optionsRadios" id="optionsRadios2" value="option1" data-toggle="radio" checked="">
+            Radio is on
+            </label>
+            
+            <label class="radio">
+            <input type="radio" name="optionsRadiosDisabled" id="optionsRadios3" value="option2" data-toggle="radio" disabled="">
+            Disabled radio is off
+            </label>
+            <label class="radio">
+            <input type="radio" name="optionsRadiosDisabled" id="optionsRadios4" value="option2" data-toggle="radio" checked="" disabled="">
+            Disabled radio is on
+            </label>
+  
+        </div>
+    </div>  
+</div>
+</body>
+</html>
+<script src="dist/js/jquery-1.11.3.js"></script>
+<script src="dist/js/bootstrap.js"></script>
+<script src="dist/js/bootstrap-radio-check.js"></script>
+<script>
+(function ($) {
+
+	$(function () {
+	
+	// Checkboxes and Radio buttons
+	$('[data-toggle="checkbox"]').radiocheck();
+	$('[data-toggle="radio"]').radiocheck();
+		
+	});
+
+})(jQuery);
+</script>
